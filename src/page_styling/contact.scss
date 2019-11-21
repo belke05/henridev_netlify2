@@ -31,7 +31,7 @@
   margin: 0 auto;
   padding-top: 50px;
   margin-bottom: 50px;
-  font-family: 'Roboto Condensed', sans-serif;
+  font-family: "Roboto Condensed", sans-serif;
   font-weight: bold;
   letter-spacing: 6px;
   color: #fff;
@@ -50,7 +50,7 @@
 .form-horizontal {
   float: left;
   max-width: 400px;
-  font-family: 'Roboto Condensed', sans-serif;
+  font-family: "Roboto Condensed", sans-serif;
   font-weight: 400;
 }
 
@@ -58,7 +58,7 @@
 textarea {
   max-width: 400px;
 
-  color: #fff;
+  color: black !important;
   letter-spacing: 1px;
 }
 
@@ -79,7 +79,7 @@ textarea {
 .send-text {
   display: block;
   margin-top: 10px;
-  font-family: 'Roboto Condensed', sans-serif;
+  font-family: "Roboto Condensed", sans-serif;
   letter-spacing: 2px;
 }
 
@@ -107,7 +107,7 @@ textarea {
 }
 
 .contact-text {
-  font-family: 'Roboto Condensed', sans-serif;
+  font-family: "Roboto Condensed", sans-serif;
   letter-spacing: 1.9px;
   color: #bbb;
 }
@@ -164,7 +164,7 @@ textarea {
 }
 
 .social-media-list li:after {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -192,7 +192,7 @@ textarea {
 }
 
 .copyright {
-  font: 200 14px 'Oswald', sans-serif;
+  font: 200 14px "Oswald", sans-serif;
   color: #555;
   letter-spacing: 1px;
   text-align: center;
@@ -208,7 +208,7 @@ input:-ms-input-placeholder,
 input::placeholder {
   color: black;
   font-size: 1rem;
-  font-family: 'Roboto Condensed', sans-serif;
+  font-family: "Roboto Condensed", sans-serif;
 }
 
 /* Begin Media Queries*/

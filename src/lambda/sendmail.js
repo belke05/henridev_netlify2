@@ -8,13 +8,13 @@ exports.handler = function(event, context, callback) {
     service: "gmail",
     host: "smtp.gmail.com",
     auth: {
-      user: process.env.GMAIL,
-      pass: process.env.GPAS
+      user: "henri160797@gmail.com",
+      pass: "77N47123"
     }
   });
   const mailOptions = {
     from: sender_mail,
-    to: process.env.GMAILRECEIVE,
+    to: "henri.dbel@gmail.com",
     subject: `personal site mail from ${name} about ${subject}.`,
     text: content
   };
