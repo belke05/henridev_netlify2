@@ -1,0 +1,9 @@
+.skills_grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 1rem;
+  color: black;
+  justify-items: center;
+  align-items: center;
+  height: 100%;
+}
