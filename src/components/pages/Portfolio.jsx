@@ -95,6 +95,8 @@ export default function Portfolio() {
           <div className="data-wrapper">
             <Gist id={`5a675c3161d8e4e69551270439b4bea5`}></Gist>
             <script src="https://gist.github.com/belke05/5a675c3161d8e4e69551270439b4bea5.js"></script>
+            <Gist id={`ba632ecdb12a63e39977d88e30c43ce7`}></Gist>
+            <script src="https://gist.github.com/belke05/ba632ecdb12a63e39977d88e30c43ce7.js"></script>
           </div>
         )}
       </div>
