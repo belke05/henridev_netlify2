@@ -7,7 +7,7 @@ import Switch from "../sub-components/Switch";
 import Gist from "react-gist";
 
 export default function Portfolio() {
-  const projectsNames = ["maptee", "jab", "war_stars"];
+  const projectsNames = ["maptee", "jab", "war_stars", "uberheatmap"];
   const [webPortfolio, setWebPortfolio] = useState(true);
   const [selectedProjectIndex, setSelectedProjectIndex] = useState(0);
 
@@ -22,12 +22,12 @@ export default function Portfolio() {
     if (arrow === "arrowback" && selectedProjectIndex === 0) {
       return setSelectedProjectIndex(2);
     }
-    if (arrow === "arrowforward" && selectedProjectIndex === 2) {
+    if (arrow === "arrowforward" && selectedProjectIndex === 3) {
       return setSelectedProjectIndex(0);
     }
     if (arrow === "arrowback" && selectedProjectIndex > 0) {
       setSelectedProjectIndex(selectedProjectIndex - 1);
-    } else if (arrow === "arrowforward" && selectedProjectIndex < 2) {
+    } else if (arrow === "arrowforward" && selectedProjectIndex < 3) {
       setSelectedProjectIndex(selectedProjectIndex + 1);
     }
   }
@@ -87,6 +87,13 @@ export default function Portfolio() {
                 git repo
               </a>
               {/* {projectInfo[selectedProject].infoElement} */}
+            </div>
+            <div className="grid_project project_logo">
+              <a
+                href={projectInfo[projectsNames[selectedProjectIndex]].url}
+                target="_blank"
+                rel="noopener noreferrer"
+              ></a>
             </div>
             <div className="arrowforward" onClick={handleProjectChange}></div>
           </div>

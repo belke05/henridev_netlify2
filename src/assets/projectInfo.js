@@ -1,10 +1,12 @@
-import React from "react"
-import maptee_logo from "./images/maptee_logo.png"
-import jab_logo from "./images/jab_logo.png"
-import war_stars_logo from "./images/war_stars_logo.png"
-import jab_mockup from "./images/jab_mockup.png"
-import maptee_mockup from "./images/maptee_mockup.png"
-import war_stars_mockup from "./images/warstars_mockup.png"
+import React from "react";
+import maptee_logo from "./images/maptee_logo.png";
+import jab_logo from "./images/jab_logo.png";
+import war_stars_logo from "./images/war_stars_logo.png";
+import jab_mockup from "./images/jab_mockup.png";
+import maptee_mockup from "./images/maptee_mockup.png";
+import war_stars_mockup from "./images/warstars_mockup.png";
+import uberheatsmap_mockup from "./images/uberheatmaps_mockup.png";
+import uber_logo from "./images/uber_logo.png";
 
 const projectInfo = {
   maptee: {
@@ -82,7 +84,18 @@ const projectInfo = {
         </b>
       </div>
     )
+  },
+  uberheatmap: {
+    icon: uber_logo,
+    mockup: uberheatsmap_mockup,
+    url: "https://uberheatmaps.netlify.com/",
+    gitcode: "https://github.com/belke05/uber_pickups_heatmaps",
+    infoElement: (
+      <div>
+        <b></b>
+      </div>
+    )
   }
-}
+};
 
-export default projectInfo
+export default projectInfo;
