@@ -6,6 +6,7 @@ import react from "./images/info_logos/react.png";
 import sql from "./images/info_logos/azure.png";
 import googleanalytics from "./images/info_logos/ganalytics.png";
 import python from "./images/info_logos/python.png";
+import tensorFlow from "./images/info_logos/tensor_flow.png";
 
 const educationInformation = {
   ghent1: {
@@ -37,7 +38,8 @@ const educationInformation = {
     technologies: [
       { name: "python", file: python },
       { name: "SQL", file: sql },
-      { name: "google analytics", file: googleanalytics }
+      { name: "google analytics", file: googleanalytics },
+      { name: "tensor flow", file: tensorFlow }
     ]
   }
 };
