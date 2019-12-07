@@ -7,6 +7,8 @@ import sql from "./images/info_logos/azure.png";
 import googleanalytics from "./images/info_logos/ganalytics.png";
 import python from "./images/info_logos/python.png";
 import tensorFlow from "./images/info_logos/tensor_flow.png";
+import redux from "./images/info_logos/redux.png";
+import reactnative from "./images/info_logos/reactnative.png";
 
 const educationInformation = {
   ghent1: {
@@ -29,7 +31,9 @@ const educationInformation = {
       { name: "mongoose", file: mongoose },
       { name: "express", file: express },
       { name: "react", file: react },
-      { name: "node.js", file: nodejs }
+      { name: "node.js", file: nodejs },
+      { name: "redux", file: redux },
+      { name: "react native", file: reactnative }
     ]
   },
   jedha: {
