@@ -1,0 +1,17 @@
+.toggle_wrapper > button {
+  margin: 2%;
+  font-weight: bold;
+  border: 1px solid #ffe309;
+  color: white;
+}
+
+.toggle_wrapper {
+  width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.selected button {
+  color: black;
+}

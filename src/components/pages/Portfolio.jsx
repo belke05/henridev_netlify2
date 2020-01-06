@@ -4,16 +4,17 @@ import Particles from "react-particles-js";
 import particlesOptions from "../../assets/particlesjs_portfolio.json";
 import projectInfo from "../../assets/projectInfo.js";
 import Switch from "../sub-components/Switch";
+import Toggler from "../sub-components/Toggler";
 import Gist from "react-gist";
 
 export default function Portfolio() {
   const projectsNames = ["maptee", "jab", "war_stars", "uberheatmap"];
-  const [webPortfolio, setWebPortfolio] = useState(true);
+  const [show, setShow] = useState("web");
   const [selectedProjectIndex, setSelectedProjectIndex] = useState(0);
 
   function handleCheck(e) {
-    console.log(e.target);
-    setWebPortfolio(!webPortfolio);
+    const section = e.target.dataset.section;
+    setShow(section);
   }
 
   function handleProjectChange(e) {
@@ -37,11 +38,9 @@ export default function Portfolio() {
       <Particles className="particle_wrapper2" params={particlesOptions} />
       <div className="portfolio_grid_wrapper">
         <div className="portfolio_switch_container">
-          <span className="portfolio_switch_label">Data</span>
-          <Switch checkHandler={handleCheck} checked={webPortfolio} />
-          <span className="portfolio_switch_label">Web</span>
+          <Toggler checkHandler={handleCheck} checked={show} />
         </div>
-        {webPortfolio && (
+        {show === "web" && (
           <div className="web-wrapper grid_item web_wrapper_grid">
             <div className="arrowback" onClick={handleProjectChange}></div>
             <div className="grid_project project_screens">
@@ -98,12 +97,27 @@ export default function Portfolio() {
             <div className="arrowforward" onClick={handleProjectChange}></div>
           </div>
         )}
-        {!webPortfolio && (
+        {show === "data" && (
           <div className="data-wrapper">
             <Gist id={`5a675c3161d8e4e69551270439b4bea5`}></Gist>
             <script src="https://gist.github.com/belke05/5a675c3161d8e4e69551270439b4bea5.js"></script>
             <Gist id={`ba632ecdb12a63e39977d88e30c43ce7`}></Gist>
             <script src="https://gist.github.com/belke05/ba632ecdb12a63e39977d88e30c43ce7.js"></script>
+          </div>
+        )}
+        {show === "dataweb" && (
+          <div>
+            <a
+              href="https://react-ml.netlify.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                class="mockupscreen"
+                src="/static/media/maptee_mockup.c11d32c6.png"
+                alt="mockup-screen"
+              />
+            </a>
           </div>
         )}
       </div>

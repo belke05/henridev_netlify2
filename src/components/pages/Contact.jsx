@@ -17,17 +17,14 @@ export default function Contact() {
       body: JSON.stringify(mailInfo)
     })
       .then(response => {
-        console.log(response);
         return "email sent";
       })
       .then(res => setMailSent(!mailSent));
   }
 
   function handleMailChange(e) {
-    console.log("here");
     const value = e.target.value;
     const name = e.target.name;
-    console.log(value, name);
     setmailInfo({ ...mailInfo, [name]: value });
   }
 
