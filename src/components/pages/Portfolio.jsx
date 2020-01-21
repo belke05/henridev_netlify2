@@ -3,6 +3,7 @@ import { useState } from "react";
 import Particles from "react-particles-js";
 import particlesOptions from "../../assets/particlesjs_portfolio.json";
 import projectInfo from "../../assets/projectInfo.js";
+import UberHeatmap from "../../assets/images/uberheatmaps_mockup.png";
 import Switch from "../sub-components/Switch";
 import Toggler from "../sub-components/Toggler";
 import Gist from "react-gist";
@@ -99,8 +100,8 @@ export default function Portfolio() {
         )}
         {show === "data" && (
           <div className="data-wrapper">
-            <Gist id={`5a675c3161d8e4e69551270439b4bea5`}></Gist>
-            <script src="https://gist.github.com/belke05/5a675c3161d8e4e69551270439b4bea5.js"></script>
+            <Gist id={`08c4c461c7bcb386cb83ef40ccefa485`}></Gist>
+            <script src="https://gist.github.com/belke05/08c4c461c7bcb386cb83ef40ccefa485.js"></script>
             <Gist id={`ba632ecdb12a63e39977d88e30c43ce7`}></Gist>
             <script src="https://gist.github.com/belke05/ba632ecdb12a63e39977d88e30c43ce7.js"></script>
           </div>
@@ -108,15 +109,18 @@ export default function Portfolio() {
         {show === "dataweb" && (
           <div>
             <a
+              href="https://uberheatmaps.netlify.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img class="mockupscreen" src={UberHeatmap} alt="mockup-screen" />
+            </a>
+            <a
               href="https://react-ml.netlify.com/"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <img
-                class="mockupscreen"
-                src="/static/media/maptee_mockup.c11d32c6.png"
-                alt="mockup-screen"
-              />
+              link 2
             </a>
           </div>
         )}

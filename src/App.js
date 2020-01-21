@@ -25,7 +25,6 @@ class LambdaDemo extends Component {
     e.preventDefault()
     fetch("/.netlify/functions/" + api)
       .then(response => {
-        console.log(response)
         return response.json()
       })
       .then(json => this.setState({ loading: false, msg: json.msg }))
