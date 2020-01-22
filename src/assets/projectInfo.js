@@ -13,7 +13,7 @@ const projectInfo = {
     icon: maptee_logo,
     mockup: maptee_mockup,
     url: "http://maptee.herokuapp.com/",
-    gitcode: "https://github.com/SandwichExpert/Final-Project",
+    gitcode: "https://mapti.herokuapp.com/",
     infoElement: (
       <div>
         <b>
