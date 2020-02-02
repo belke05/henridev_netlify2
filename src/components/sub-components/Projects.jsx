@@ -1,14 +1,14 @@
-import React, { useState } from "react"
-import { useSpring, animated } from "react-spring"
-import { Card, Button } from "react-bootstrap"
-import projectInfo from "../../assets/projectInfo.js"
-const AnimatedCard = animated(Card)
+import React, { useState } from "react";
+import { useSpring, animated } from "react-spring";
+import { Card, Button } from "react-bootstrap";
+import projectInfo from "../../assets/data/projectInfo.js";
+const AnimatedCard = animated(Card);
 
 export default function Projects() {
   const [toggles, setToggles] = useState({
     toggle1: false,
     icon: "maptee"
-  })
+  });
   // instead of directly applying css props
   // we can apply a function to them so their
   // value depends on another value = interpolation
@@ -19,14 +19,14 @@ export default function Projects() {
     transform: `rotateY(${toggles.toggle1 ? 180 : 0}deg) perspective(365px)`,
     zIndex: toggles.toggle1 ? -1 : 1,
     config: { mass: 5, tension: 500, friction: 80 }
-  })
+  });
 
   function flipcard(e) {
-    const project = e.target.dataset.project
+    const project = e.target.dataset.project;
     if (project) {
-      setToggles({ toggle1: !toggles.toggle1, icon: project })
+      setToggles({ toggle1: !toggles.toggle1, icon: project });
     } else {
-      setToggles({ ...toggles, toggle1: !toggles.toggle1 })
+      setToggles({ ...toggles, toggle1: !toggles.toggle1 });
     }
   }
 
@@ -88,7 +88,7 @@ export default function Projects() {
           <Button
             variant="secondary"
             onClick={e => {
-              setToggles({ ...toggles, toggle1: !toggles.toggle1 })
+              setToggles({ ...toggles, toggle1: !toggles.toggle1 });
             }}
           >
             <span role="img" aria-label="return icon" className="return_icon">
@@ -98,5 +98,5 @@ export default function Projects() {
         </Card.Body>
       </AnimatedCard>
     </div>
-  )
+  );
 }

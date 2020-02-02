@@ -1,20 +1,33 @@
 import React from "react";
 import { useState } from "react";
 import Particles from "react-particles-js";
-import particlesOptions from "../../assets/particlesjs_portfolio.json";
-import projectInfo from "../../assets/projectInfo.js";
-import UberHeatmap from "../../assets/images/uberheatmaps_mockup.png";
-import Switch from "../sub-components/Switch";
+import particlesOptions from "../../assets/data/particlesjs_portfolio.json";
 import Toggler from "../sub-components/Toggler";
-import Gist from "react-gist";
+import WebProject from "../sub-components/WebProject";
+import DataWebProject from "../sub-components/DataWebProject";
+import DataProject from "../sub-components/DataProject";
 
 export default function Portfolio() {
-  const projectsNames = ["maptee", "jab", "war_stars", "uberheatmap"];
+  const [projectsNames, setProjectNames] = useState([
+    "maptee",
+    "jab",
+    "war_stars",
+    "mapti"
+  ]);
   const [show, setShow] = useState("web");
   const [selectedProjectIndex, setSelectedProjectIndex] = useState(0);
 
   function handleCheck(e) {
     const section = e.target.dataset.section;
+    if (section === "dataweb") {
+      setProjectNames(["uberheatmap", "MLReact", "ObjectDetector"]);
+    }
+    if (section === "web") {
+      setProjectNames(["maptee", "jab", "war_stars", "mapti"]);
+    }
+    if (section === "data") {
+      setProjectNames(["maptee", "jab", "war_stars", "mapti"]);
+    }
     setShow(section);
   }
 
@@ -22,14 +35,20 @@ export default function Portfolio() {
     if (!e.target.className) return;
     const arrow = e.target.className;
     if (arrow === "arrowback" && selectedProjectIndex === 0) {
-      return setSelectedProjectIndex(2);
+      return setSelectedProjectIndex(projectsNames.length - 1);
     }
-    if (arrow === "arrowforward" && selectedProjectIndex === 3) {
+    if (
+      arrow === "arrowforward" &&
+      projectsNames.length - 1 === selectedProjectIndex
+    ) {
       return setSelectedProjectIndex(0);
     }
     if (arrow === "arrowback" && selectedProjectIndex > 0) {
       setSelectedProjectIndex(selectedProjectIndex - 1);
-    } else if (arrow === "arrowforward" && selectedProjectIndex < 3) {
+    } else if (
+      arrow === "arrowforward" &&
+      selectedProjectIndex < projectsNames.length - 1
+    ) {
       setSelectedProjectIndex(selectedProjectIndex + 1);
     }
   }
@@ -42,88 +61,18 @@ export default function Portfolio() {
           <Toggler checkHandler={handleCheck} checked={show} />
         </div>
         {show === "web" && (
-          <div className="web-wrapper grid_item web_wrapper_grid">
-            <div className="arrowback" onClick={handleProjectChange}></div>
-            <div className="grid_project project_screens">
-              <div className="grid_project project_logo">
-                <a
-                  href={projectInfo[projectsNames[selectedProjectIndex]].url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <div
-                    className="project_img_wrapper"
-                    style={{
-                      backgroundImage: `url(${
-                        projectInfo[projectsNames[selectedProjectIndex]].icon
-                      })`
-                    }}
-                  ></div>
-                </a>
-              </div>
-              <a
-                href={projectInfo[projectsNames[selectedProjectIndex]].url}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img
-                  className="mockupscreen"
-                  src={projectInfo[projectsNames[selectedProjectIndex]].mockup}
-                  alt="mockup-screen"
-                />
-              </a>
-              <a
-                href={projectInfo[projectsNames[selectedProjectIndex]].url}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                live site
-              </a>
-              <a
-                href={projectInfo[projectsNames[selectedProjectIndex]].gitcode}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                git repo
-              </a>
-              {/* {projectInfo[selectedProject].infoElement} */}
-            </div>
-            <div className="grid_project project_logo">
-              <a
-                href={projectInfo[projectsNames[selectedProjectIndex]].url}
-                target="_blank"
-                rel="noopener noreferrer"
-              ></a>
-            </div>
-            <div className="arrowforward" onClick={handleProjectChange}></div>
-          </div>
-        )}
-        {show === "data" && (
-          <div className="data-wrapper">
-            <Gist id={`08c4c461c7bcb386cb83ef40ccefa485`}></Gist>
-            <script src="https://gist.github.com/belke05/08c4c461c7bcb386cb83ef40ccefa485.js"></script>
-            <Gist id={`ba632ecdb12a63e39977d88e30c43ce7`}></Gist>
-            <script src="https://gist.github.com/belke05/ba632ecdb12a63e39977d88e30c43ce7.js"></script>
-          </div>
+          <WebProject
+            handleProjectChange={handleProjectChange}
+            selectedProject={projectsNames[selectedProjectIndex]}
+          />
         )}
         {show === "dataweb" && (
-          <div>
-            <a
-              href="https://uberheatmaps.netlify.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img class="mockupscreen" src={UberHeatmap} alt="mockup-screen" />
-            </a>
-            <a
-              href="https://react-ml.netlify.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              link 2
-            </a>
-          </div>
+          <DataWebProject
+            handleProjectChange={handleProjectChange}
+            selectedProject={projectsNames[selectedProjectIndex]}
+          />
         )}
+        {show === "data" && <DataProject />}
       </div>
     </div>
   );

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Particles from "react-particles-js";
-import particlesOptions from "../../assets/particlesjs_portfolio.json";
+import particlesOptions from "../../assets/data/particlesjs_portfolio.json";
 
 export default function Contact() {
   const [mailInfo, setmailInfo] = useState({

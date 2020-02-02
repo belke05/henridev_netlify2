@@ -1,19 +1,19 @@
 import React from "react";
-import maptee_logo from "./images/maptee_logo.png";
-import jab_logo from "./images/jab_logo.png";
-import war_stars_logo from "./images/war_stars_logo.png";
-import jab_mockup from "./images/jab_mockup.png";
-import maptee_mockup from "./images/maptee_mockup.png";
-import war_stars_mockup from "./images/warstars_mockup.png";
-import uberheatsmap_mockup from "./images/uberheatmaps_mockup.png";
-import uber_logo from "./images/uber_logo.png";
+import maptee_logo from "../images/maptee_logo.png";
+import jab_logo from "../images/jab_logo.png";
+import war_stars_logo from "../images/war_stars_logo.png";
+import jab_mockup from "../images/jab_mockup.png";
+import maptee_mockup from "../images/maptee_mockup.png";
+import war_stars_mockup from "../images/warstars_mockup.png";
+import uberheatsmap_mockup from "../images/uberheatmaps_mockup.png";
+import uber_logo from "../images/uber_logo.png";
 
 const projectInfo = {
   maptee: {
     icon: maptee_logo,
     mockup: maptee_mockup,
     url: "http://maptee.herokuapp.com/",
-    gitcode: "https://mapti.herokuapp.com/",
+    gitcode: "https://github.com/SandwichExpert/Final-Project",
     infoElement: (
       <div>
         <b>

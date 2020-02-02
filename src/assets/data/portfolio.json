@@ -1,0 +1,51 @@
+{
+  "maptee": {
+    "icon": "maptee_logo",
+    "mockup": "maptee_mockup",
+    "url": "http://maptee.herokuapp.com/",
+    "gitcode": "https://github.com/SandwichExpert/Final-Project",
+    "infoElement": null
+  },
+  "jab": {
+    "icon": "jab_logo",
+    "mockup": "jab_mockup",
+    "url": "http://jabironhack.herokuapp.com/",
+    "gitcode": "https://github.com/belke05/jab",
+    "infoElement": null
+  },
+  "war_stars": {
+    "icon": "war_stars_logo",
+    "mockup": "war_stars_mockup",
+    "url": "https://belke05.github.io/",
+    "gitcode": "https://github.com/belke05/war_stars",
+    "infoElement": null
+  },
+  "mapti": {
+    "icon": "mapti_logo",
+    "mockup": "mapti_mockup",
+    "url": "http://mapti.herokuapp.com/",
+    "gitcode": "https://github.com/belke05/maptee2.0",
+    "infoElement": null
+  },
+  "uberheatmap": {
+    "icon": "uber_logo",
+    "mockup": "uberheatsmap_mockup",
+    "url": "https://uberheatmaps.netlify.com/",
+    "gitcode": "https://github.com/belke05/uber_pickups_heatmaps",
+    "infoElement": null
+  },
+  "MLReact": {
+    "icon": "uber_logo",
+    "mockup": "uberheatsmap_mockup",
+    "url": "https://react-ml.netlify.com/",
+    "gitcode": "https://github.com/belke05/ML_flask_react",
+    "infoElement": null
+  },
+  "ObjectDetector": {
+    "icon": "uber_logo",
+    "mockup": "uberheatsmap_mockup",
+    "url": "https://objectdetector-264912.firebaseapp.com/",
+    "gitcode": "https://github.com/belke05/grocery_detection_app",
+    "infoElement": null
+  }
+}

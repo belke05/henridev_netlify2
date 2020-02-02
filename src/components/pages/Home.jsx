@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import Education from "../sub-components/Education";
 import Experience from "../sub-components/Experience";
 import Skills from "../sub-components/Skills";
-import particlesOptions from "../../assets/particlesjs_portfolio.json";
+import particlesOptions from "../../assets/data/particlesjs_portfolio.json";
 import Particles from "react-particles-js";
 import Projects from "../sub-components/Projects";
 

@@ -8,24 +8,28 @@ export default function Scrollbar() {
   }, []);
 
   function handleScroll(e) {
-    const portfolio = document.querySelector(".portfolio-wrapper");
-    const contact = document.querySelector(".contact_page");
-    const scrollbar = document.querySelector(".scrollbar_line");
-    const icons = document.querySelectorAll("i.fas");
-    const top_portfolio = portfolio.offsetTop;
-    const top_contact = contact.offsetTop;
-    if (window.scrollY > (top_portfolio + top_contact) / 2) {
-      icons[2].classList.add("activegold");
-      icons[0].classList.remove("activegold");
-      icons[1].classList.remove("activegold");
-    } else if (window.scrollY > top_portfolio / 2) {
-      icons[1].classList.add("activegold");
-      icons[2].classList.remove("activegold");
-      icons[0].classList.remove("activegold");
-    } else if (window.scrollY < top_portfolio / 2) {
-      icons[0].classList.add("activegold");
-      icons[2].classList.remove("activegold");
-      icons[1].classList.remove("activegold");
+    try {
+      const portfolio = document.querySelector(".portfolio-wrapper");
+      const contact = document.querySelector(".contact_page");
+      const scrollbar = document.querySelector(".scrollbar_line");
+      const icons = document.querySelectorAll("i.fas");
+      const top_portfolio = portfolio.offsetTop;
+      const top_contact = contact.offsetTop;
+      if (window.scrollY > (top_portfolio + top_contact) / 2) {
+        icons[2].classList.add("activegold");
+        icons[0].classList.remove("activegold");
+        icons[1].classList.remove("activegold");
+      } else if (window.scrollY > top_portfolio / 2) {
+        icons[1].classList.add("activegold");
+        icons[2].classList.remove("activegold");
+        icons[0].classList.remove("activegold");
+      } else if (window.scrollY < top_portfolio / 2) {
+        icons[0].classList.add("activegold");
+        icons[2].classList.remove("activegold");
+        icons[1].classList.remove("activegold");
+      }
+    } catch {
+      console.error("error");
     }
   }
 

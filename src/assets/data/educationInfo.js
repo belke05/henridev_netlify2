@@ -1,14 +1,14 @@
-import javascript from "./images/info_logos/javascript.png";
-import nodejs from "./images/info_logos/nodejs.png";
-import express from "./images/info_logos/express.png";
-import mongoose from "./images/info_logos/mongodb.png";
-import react from "./images/info_logos/react.png";
-import sql from "./images/info_logos/azure.png";
-import googleanalytics from "./images/info_logos/ganalytics.png";
-import python from "./images/info_logos/python.png";
-import tensorFlow from "./images/info_logos/tensor_flow.png";
-import redux from "./images/info_logos/redux.png";
-import reactnative from "./images/info_logos/reactnative.png";
+import javascript from "../images/info_logos/javascript.png";
+import nodejs from "../images/info_logos/nodejs.png";
+import express from "../images/info_logos/express.png";
+import mongoose from "../images/info_logos/mongodb.png";
+import react from "../images/info_logos/react.png";
+import sql from "../images/info_logos/azure.png";
+import googleanalytics from "../images/info_logos/ganalytics.png";
+import python from "../images/info_logos/python.png";
+import tensorFlow from "../images/info_logos/tensor_flow.png";
+import redux from "../images/info_logos/redux.png";
+import reactnative from "../images/info_logos/reactnative.png";
 
 const educationInformation = {
   ghent1: {

@@ -3,7 +3,7 @@ import ghent from "../../assets/images/info_logos/ghent2.png";
 import baruch from "../../assets/images/info_logos/baruch2.png";
 import iron from "../../assets/images/info_logos/iron2.png";
 import jedha from "../../assets/images/info_logos/jedha.png";
-import educationInfo from "../../assets/educationInfo";
+import educationInfo from "../../assets/data/educationInfo";
 
 export default function Education() {
   const [clickedUni, setClickedUni] = useState("ironhack");
